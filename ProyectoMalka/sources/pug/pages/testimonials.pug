@@ -1,0 +1,256 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Testimonials'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      // Owl Carousel
+      .owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-nav='true')
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Ann Peterson
+
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+            p.quote-default__cite Sam Williams
+
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      // Owl Carousel
+      .owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Ann Peterson
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+            p.quote-default__cite Sam Williams
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-3-120x120')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      // Owl Carousel
+      .owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Ann Peterson
+
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+            p.quote-default__cite Sam Williams
+
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Ann Peterson
+
+        .col-md-6.col-lg-4
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+            p.quote-default__cite Sam Williams
+
+        .col-md-6.col-lg-4
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-3-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            p.quote-default__cite Ann Peterson
+
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+            p.quote-default__cite Sam Williams
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote bordered
+          .quote-bordered
+            +quote-mark('quote-bordered__mark')
+            .quote-bordered__image
+              +jpg('testimonials-1-120x120')
+            .quote-bordered__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            .quote-bordered__caption
+              p.quote-bordered__cite Ann Peterson
+              p.quote-bordered__small Client
+
+        .col-md-6.col-lg-4
+          // Quote bordered
+          .quote-bordered
+            +quote-mark('quote-bordered__mark')
+            .quote-bordered__image
+              +jpg('testimonials-2-120x120')
+            .quote-bordered__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+            .quote-bordered__caption
+              p.quote-bordered__cite Sam Williams
+              p.quote-bordered__small Client
+
+        .col-md-6.col-lg-4
+          // Quote bordered
+          .quote-bordered
+            +quote-mark('quote-bordered__mark')
+            .quote-bordered__image
+              +jpg('testimonials-3-120x120')
+            .quote-bordered__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+            .quote-bordered__caption
+              p.quote-bordered__cite Adam Smith
+              p.quote-bordered__small Client
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote classic
+          .quote-classic
+            .quote-classic__main
+              +quote-mark('quote-classic__mark')
+              .quote-classic__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+
+            .quote-classic__caption
+              .quote-classic__image.quote-classic__caption-aside
+                +jpg('testimonials-1-120x120')
+              .quote-classic__caption-main
+                p.quote-classic__cite Ann Peterson
+                p.quote-classic__small Client
+
+        .col-md-6.col-lg-4
+          // Quote classic
+          .quote-classic
+            .quote-classic__main
+              +quote-mark('quote-classic__mark')
+              .quote-classic__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!
+
+            .quote-classic__caption
+              .quote-classic__image.quote-classic__caption-aside
+                +jpg('testimonials-2-120x120')
+              .quote-classic__caption-main
+                p.quote-classic__cite Sam Williams
+                p.quote-classic__small Client
+
+        .col-md-6.col-lg-4
+          // Quote classic
+          .quote-classic
+            .quote-classic__main
+              +quote-mark('quote-classic__mark')
+              .quote-classic__text: p.q Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos minus fugiat odit unde nam, ullam eveniet itaque illum alias et doloremque, deleniti molestias optio aliquid saepe, numquam corporis debitis!
+
+            .quote-classic__caption
+              .quote-classic__image.quote-classic__caption-aside
+                +jpg('testimonials-3-120x120')
+              .quote-classic__caption-main
+                p.quote-classic__cite Adam Smith
+                p.quote-classic__small Client
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-modern
+

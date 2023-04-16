@@ -1,0 +1,38 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+
+block variables
+	- var activeIndex = 3
+	- var pageName = '404 page'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.text-center
+		+rd-parallax({
+			"backgroundSpeed": "0.35",
+			"attrType": "media",
+			"src": "images/parallax-09.jpg",
+			"htmlSpeed": "0.1",
+			"class": 'parallax-header rd-parallax-light parallax-overlay'
+		})
+			.parallax-header__inner: .parallax-header__content
+				.container
+					.row.justify-content-sm-center
+						.col-md-10.col-xl-8
+							h2 Page Not Found
+							p Unfortunately, the page you requested couldn’t be found. Please refresh the page or try again later.
+							a(href='index.html').button.button-gray-light-outline: span Go back
+
+
+	// Page Footer
+	include ../sections/_footer-modern
+
